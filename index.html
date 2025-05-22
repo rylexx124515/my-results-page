@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Results</title>
+</head>
+<body>
+  <h2>Your Results:</h2>
+  <pre id="results" style="white-space: pre-wrap; border: 1px solid #ccc; padding: 10px;"></pre>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const plan = urlParams.get('plan') || "No results found";
+    document.getElementById('results').textContent = decodeURIComponent(plan);
+  </script>
+</body>
+</html>
